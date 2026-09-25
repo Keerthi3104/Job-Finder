@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Finder</title>
+    <link rel="stylesheet" href="/search job/style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo"><span>Job</span>Finder</div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#companies">Companies</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <button class="post-btn" id="postJobBtn">Post a Job</button>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="small-title">YOUR CAREER STARTS HERE</p>
+
+        <h1>
+          Find Your
+          <span>Dream Job</span>
+        </h1>
+
+        <p class="hero-text">
+          Discover opportunities that match your skills, interests and career
+          goals.
+        </p>
+
+        <div class="search-box">
+          <div class="search-input">
+            <span>🔍</span>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Job title or keyword"
+            />
+          </div>
+
+          <div class="search-input">
+            <span>📍</span>
+            <input type="text" id="locationInput" placeholder="Location" />
+          </div>
+
+          <button id="searchBtn">Search Jobs</button>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="floating-card card-one">
+          <span>💼</span>
+          <div>
+            <strong>10K+</strong>
+            <p>Jobs Available</p>
+          </div>
+        </div>
+
+        <div class="floating-card card-two">
+          <span>👥</span>
+          <div>
+            <strong>5K+</strong>
+            <p>Companies</p>
+          </div>
+        </div>
+
+        <div class="hero-circle">
+          <div class="briefcase">💼</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="jobs-section" id="jobs">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">EXPLORE OPPORTUNITIES</p>
+          <h2>Latest Job Openings</h2>
+        </div>
+
+        <select id="jobFilter">
+          <option value="all">All Jobs</option>
+          <option value="Full Time">Full Time</option>
+          <option value="Internship">Internship</option>
+          <option value="Remote">Remote</option>
+        </select>
+      </div>
+
+      <div class="jobs-container" id="jobsContainer">
+        <div
+          class="job-card"
+          data-title="Frontend Developer"
+          data-location="Chennai"
+          data-type="Full Time"
+        >
+          <div class="company-logo blue">T</div>
+
+          <div class="job-content">
+            <h3>Fullstack Developer</h3>
+            <p class="company">Innovate Solutions Technology</p>
+
+            <div class="job-info">
+              <span>📍 Madurai</span>
+              <span>💼 Full Time</span>
+            </div>
+
+            <div class="job-bottom">
+              <strong>₹4 - ₹7 LPA</strong>
+              <button class="details-btn">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="job-card"
+          data-title="React Developer"
+          data-location="Bangalore"
+          data-type="Remote"
+        >
+          <div class="company-logo purple">R</div>
+
+          <div class="job-content">
+            <h3>React Developer</h3>
+            <p class="company">PixelCraft Technologies</p>
+
+            <div class="job-info">
+              <span>📍 Bangalore</span>
+              <span>🌐 Remote</span>
+            </div>
+
+            <div class="job-bottom">
+              <strong>₹5 - ₹9 LPA</strong>
+              <button class="details-btn">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="job-card"
+          data-title="JavaScript Developer"
+          data-location="Coimbatore"
+          data-type="Full Time"
+        >
+          <div class="company-logo orange">J</div>
+
+          <div class="job-content">
+            <h3>JavaScript Developer</h3>
+            <p class="company">CodeSphere</p>
+
+            <div class="job-info">
+              <span>📍 Coimbatore</span>
+              <span>💼 Full Time</span>
+            </div>
+
+            <div class="job-bottom">
+              <strong>₹3 - ₹6 LPA</strong>
+              <button class="details-btn">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="job-card"
+          data-title="UI UX Designer"
+          data-location="Chennai"
+          data-type="Internship"
+        >
+          <div class="company-logo green">U</div>
+
+          <div class="job-content">
+            <h3>UI UX Designer</h3>
+            <p class="company">DesignHub</p>
+
+            <div class="job-info">
+              <span>📍 Chennai</span>
+              <span>🎓 Internship</span>
+            </div>
+
+            <div class="job-bottom">
+              <strong>₹15K - ₹25K</strong>
+              <button class="details-btn">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p id="noJobs" class="no-jobs">No jobs found.</p>
+    </section>
+
+    <section class="companies-section" id="companies">
+      <div class="section-heading center">
+        <p class="section-label">TOP COMPANIES</p>
+        <h2>Build Your Career With Great Companies</h2>
+      </div>
+
+      <div class="company-list">
+        <div class="company-box">
+          <span>G</span>
+          <h3>Google</h3>
+          <p>Technology</p>
+        </div>
+
+        <div class="company-box">
+          <span>M</span>
+          <h3>Microsoft</h3>
+          <p>Technology</p>
+        </div>
+
+        <div class="company-box">
+          <span>A</span>
+          <h3>Amazon</h3>
+          <p>E-Commerce</p>
+        </div>
+
+        <div class="company-box">
+          <span>T</span>
+          <h3>TCS</h3>
+          <p>IT Services</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div>
+        <p class="section-label">WHY JOB FINDER?</p>
+        <h2>Making Your Job Search Simple</h2>
+      </div>
+
+      <p>
+        Job Finder provides a simple platform to discover job opportunities
+        based on your skills and preferred location. The website focuses on a
+        clean user experience and makes searching for jobs quick and easy.
+      </p>
+    </section>
+
+    <footer>
+      <div class="logo"><span>Job</span>Finder</div>
+
+      <p>
+        © 2026 Job Finder. All rights reserved.<br />
+        By Keerthika <br />
+      </p>
+    </footer>
+
+    <div class="modal" id="jobModal">
+      <div class="modal-content">
+        <button class="close-btn" id="closeModal">×</button>
+
+        <div class="modal-logo" id="modalLogo">T</div>
+
+        <h2 id="modalTitle">Frontend Developer</h2>
+
+        <p id="modalCompany">TechNova Solutions</p>
+
+        <div class="modal-info">
+          <span id="modalLocation"> 📍 Chennai </span>
+
+          <span id="modalType"> 💼 Full Time </span>
+
+          <span id="modalSalary"> 💰 ₹4 - ₹7 LPA </span>
+        </div>
+
+        <p class="modal-description">
+          We are looking for a motivated developer to join our team. You will
+          work with modern technologies and collaborate with designers and
+          developers to build user-friendly web applications.
+        </p>
+
+        <button class="apply-btn">Apply Now</button>
+      </div>
+    </div>
+
+    <div class="modal" id="postJobModal">
+      <div class="modal-content">
+        <button class="close-btn" id="closePostJob">×</button>
+
+        <h2>Post a Job</h2>
+        <p class="form-subtitle">Find the right candidate for your company</p>
+
+        <form id="postJobForm">
+          <input type="text" id="jobTitle" placeholder="Job Title" required />
+
+          <input
+            type="text"
+            id="companyName"
+            placeholder="Company Name"
+            required
+          />
+
+          <input type="text" id="jobLocation" placeholder="Location" required />
+
+          <select id="jobType" required>
+            <option value="">Select Job Type</option>
+            <option value="Full Time">Full Time</option>
+            <option value="Internship">Internship</option>
+            <option value="Remote">Remote</option>
+          </select>
+
+          <input type="text" id="salary" placeholder="Salary Range" required />
+
+          <button type="submit" class="apply-btn">Publish Job</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/search job/script.js"></script>
+  </body>
+</html>
